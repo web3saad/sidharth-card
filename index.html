@@ -156,6 +156,8 @@
   .ico.ph{background:var(--or-grad)}
   .ico.em{background:linear-gradient(135deg,#2a2a2a,#0b0b0b);color:#ffb347}
   .ico.web{background:var(--gr-grad)}
+  .ico.li{background:linear-gradient(135deg,#0a66c2,#004182)}
+  .ico.li svg{width:20px;height:20px}
   .ico.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
   .row .t{flex:1;min-width:0}
   .row b{display:block;font-size:15px;font-weight:700}
@@ -273,6 +275,11 @@
         <span class="t"><b>Instagram</b><small>@sidharth_s_28</small></span>
         <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
       </a>
+      <a class="row" href="https://www.linkedin.com/in/sidharth-s-897955368">
+        <span class="ico li"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span>
+        <span class="t"><b>LinkedIn</b><small>Sidharth S</small></span>
+        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
     </section>
 
     <button class="save rise d3" data-save>
@@ -302,6 +309,7 @@
   var EMAIL = "sidharthbusiness28@gmail.com";
   var IG    = "https://www.instagram.com/sidharth_s_28/";
   var WEB   = "https://madetrue.in";
+  var LI    = "https://www.linkedin.com/in/sidharth-s-897955368";
   var PAGE  = "https://web3saad.github.io/sidharth-card/";
 
   var waUrl = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent("Hi Sidharth 👋");
@@ -319,7 +327,8 @@
             "\r\nTEL;TYPE=CELL:+" + PHONE +
             "\r\nEMAIL;TYPE=INTERNET:" + EMAIL +
             "\r\nURL:" + WEB +
-            "\r\nX-SOCIALPROFILE;TYPE=instagram:" + IG + "\r\nEND:VCARD";
+            "\r\nX-SOCIALPROFILE;TYPE=instagram:" + IG +
+            "\r\nX-SOCIALPROFILE;TYPE=linkedin:" + LI + "\r\nEND:VCARD";
   document.querySelectorAll("[data-save]").forEach(function(el){
     el.addEventListener("click", function(e){
       e.preventDefault();

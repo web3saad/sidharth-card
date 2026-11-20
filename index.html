@@ -185,6 +185,68 @@
   .save svg{width:20px;height:20px}
   .save:active{transform:scale(.98)}
 
+  /* about sections */
+  .panel{margin-top:16px;border-radius:28px;padding:26px 22px 24px;position:relative;overflow:hidden}
+  .kicker{display:flex;align-items:center;gap:10px;font-size:10.5px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--orange)}
+  .kicker::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(242,138,15,.5),transparent)}
+  .panel h2{margin-top:14px;font-family:var(--display);font-style:italic;font-weight:900;text-transform:uppercase;font-size:24px;line-height:1.08;letter-spacing:-.01em}
+  .panel p{margin-top:12px;font-size:14.5px;line-height:1.7;color:#4c4740}
+
+  .me{background:var(--card);border:1px solid rgba(0,0,0,.06);box-shadow:var(--shadow-sm)}
+  .me::before{content:"\201C";position:absolute;top:-34px;right:14px;font-family:var(--serif);font-size:170px;line-height:1;color:var(--soft);pointer-events:none}
+  .me h2 .o{background:var(--or-grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+  .me .lead{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.35;color:var(--ink);font-weight:600}
+  .me .now{
+    margin-top:16px;padding:14px 16px;border-radius:16px;background:var(--soft);
+    border-left:3px solid var(--orange);font-size:14px;line-height:1.6;color:#4c4740
+  }
+  .me .now b{font-weight:800}
+  .me .now .m{color:var(--orange)}.me .now .t{color:#5a9a14}
+  .sign{margin-top:18px;display:flex;flex-direction:column;gap:2px;font-family:var(--display);font-style:italic;font-weight:900;text-transform:uppercase;font-size:15px;letter-spacing:.02em;line-height:1.25}
+  .sign span:first-child{color:var(--ink)}
+  .sign span:last-child{background:var(--gr-grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+
+  .mt{background:#0b0b0b;color:#f2efe9;box-shadow:0 30px 60px -28px rgba(0,0,0,.6)}
+  .mt::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(60% 40% at 100% 0%, rgba(242,138,15,.22), transparent 70%),
+      radial-gradient(50% 35% at 0% 100%, rgba(127,191,38,.18), transparent 70%),
+      repeating-linear-gradient(125deg, rgba(255,255,255,.025) 0 1px, transparent 1px 12px);
+  }
+  .mt > *{position:relative}
+  .mt .head{display:flex;align-items:center;gap:12px}
+  .mt .head img{width:44px;height:46px;mix-blend-mode:screen}
+  .mt .head b{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.04em}
+  .mt .head .m{color:var(--orange)}.mt .head .t{color:var(--green)}
+  .mt .head small{display:block;font-family:var(--serif);font-style:italic;font-size:14px;color:#bdb6aa;margin-top:1px}
+  .mt .kicker{margin-top:20px}
+  .mt h2{color:#fff;font-size:22px}
+  .mt h2 em{font-style:inherit;color:var(--orange)}
+  .mt h2 i{font-style:inherit;color:var(--green)}
+  .mt p{color:#cfc9bf}
+  .chips{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{font-size:12px;font-weight:700;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#f2efe9}
+  .chips span:nth-child(odd){border-color:rgba(242,138,15,.45)}
+  .chips span:nth-child(even){border-color:rgba(127,191,38,.45)}
+  .vision{
+    margin-top:20px;padding:18px;border-radius:20px;
+    background:linear-gradient(135deg,rgba(242,138,15,.14),rgba(127,191,38,.10));
+    border:1px solid rgba(255,255,255,.10)
+  }
+  .vision .kicker{margin-top:0;color:var(--green)}
+  .vision .kicker::after{background:linear-gradient(90deg,rgba(127,191,38,.5),transparent)}
+  .vision p{margin-top:10px;font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.4;color:#fff;font-weight:600}
+  .motto{margin-top:20px;text-align:center;font-family:var(--display);font-style:italic;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#bdb6aa;line-height:1.5}
+  .motto b{color:#fff}
+  .visit{
+    margin-top:18px;display:flex;align-items:center;justify-content:center;gap:10px;
+    padding:15px;border-radius:16px;background:var(--or-grad);color:#111;
+    font-weight:800;font-size:14.5px;letter-spacing:.04em;
+    box-shadow:0 14px 28px -14px rgba(242,138,15,.8)
+  }
+  .visit svg{width:18px;height:18px}
+
   /* QR */
   .qr{
     margin-top:16px;background:var(--card);border-radius:24px;padding:18px;
@@ -287,6 +349,40 @@
       Save Contact
     </button>
   </article>
+
+  <section class="panel me rise d3" aria-labelledby="me-h">
+    <div class="kicker">About Me</div>
+    <h2 id="me-h">Building with <span class="o">purpose</span></h2>
+    <p class="lead">I am an entrepreneur driven by ideas, innovation and the belief that meaningful businesses can create meaningful change.</p>
+    <p>My focus is on building solutions that create opportunities, empower independent businesses and bring people closer to new possibilities.</p>
+    <div class="now">Currently, I am building <b><span class="m">MADE</span><span class="t">TRUE</span></b>, with a vision to make entrepreneurship more accessible and create a stronger connection between independent sellers and customers.</div>
+    <div class="sign"><span>Building with purpose.</span><span>Growing with impact.</span></div>
+  </section>
+
+  <section class="panel mt rise d3" aria-labelledby="mt-h">
+    <div class="head">
+      <img src="mark.jpg" alt="" width="44" height="46">
+      <div><b><span class="m">MADE</span><span class="t">TRUE</span></b><small>from real hands to your home</small></div>
+    </div>
+    <div class="kicker">About MadeTrue</div>
+    <h2 id="mt-h">A marketplace for <em>every maker.</em> An opportunity for <i>every small business.</i></h2>
+    <p>MADETRUE is a digital marketplace that brings customers closer to the people who make and sell products.</p>
+    <p>From home-based entrepreneurs and independent makers to artisans, small producers and Self-Help Groups (SHGs), we aim to give small businesses a platform to showcase their products, reach more customers and grow their businesses.</p>
+    <div class="chips" aria-label="Who we serve">
+      <span>Home-based entrepreneurs</span><span>Independent makers</span><span>Artisans</span><span>Small producers</span><span>Self-Help Groups</span>
+    </div>
+    <p>We believe great products and talented makers deserve to be discovered, regardless of the size of their business.</p>
+    <p>Through a simple digital experience, MADETRUE makes product discovery easier for customers while creating new opportunities for the people behind every product.</p>
+    <div class="vision">
+      <div class="kicker">Our Vision</div>
+      <p>To build an inclusive marketplace where every maker has an opportunity to be seen, every small business has room to grow, and every customer can discover something meaningful.</p>
+    </div>
+    <div class="motto"><b>MADETRUE</b> — Where Small Businesses<br>Find Bigger Opportunities.</div>
+    <a class="visit" href="https://madetrue.in">
+      Visit madetrue.in
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </section>
 
   <aside class="qr rise d3">
     <a class="code" href="qr.png" download="Sidharth-S-QR.png" aria-label="Download QR code">
